@@ -8,11 +8,8 @@ while ans:
 
 
     menu = input ("""
-
     1. Beer bottles
-
     2. Info sheet
-
     3. Deposit calculator
     
     Please select and option: """)
@@ -52,33 +49,37 @@ while ans:
 
 
     elif menu == "3":
-        portion_deposit = 0
-        current_savings = 0
-        r = 0.04
+    month_counter = 0
+    portion_deposit = 0.20
+    current_savings = 0
+    r = 0.04
 
-        annual_salary = input ("Please enter your current annual salary: ")
-        portion_saved = input ("Please enter how much you would like to be saved, as a decimal: ")
-        total_cost = input ("Please enter the cost of your dream home: ")
 
-        months = 0
+    annual_salary = input ("Please enter your current annual salary: ")
+    portion_saved = input ("Please enter how much you would like to be saved, as a decimal: ")
+    total_cost = input ("Please enter the cost of your dream home: ")
 
-        annual_salary = int (annual_salary)
-        portion_saved = float(portion_saved)
+    annual_salary = int(annual_salary)
+    portion_saved = float(portion_saved)
+    total_cost = float(total_cost)
 
-        current_savings = annual_salary*r/12
+    monthly_salary = annual_salary/12 
+
+    while month_counter != 12:
+
+
+
+
+
+        total_cost = total_cost - (total_cost*portion_deposit)
 
         monthly_salary = annual_salary/12
 
-        portion_saved = portion_saved*100
+        current_savings = monthly_salary*portion_saved
 
-        current_savings = monthly_salary/portion_saved
-
-        total_cost = float(total_cost)
-        months = float(months)
+        current_savings = current_savings*r
 
         months = total_cost/current_savings
 
         print (months)
 
-
-        #Ive done something severely/simply wrong
